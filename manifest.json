@@ -1,0 +1,16 @@
+{
+  "name": "Academy Management System",
+  "short_name": "AcademySys",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#2c3e50",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJz48cmVjdCB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgcng9JzE4JyBmaWxsPScjMmMzZTUwJy8+PHBvbHlnb24gcG9pbnRzPSc1MCwyNiA5MCw0NCA1MCw2MiAxMCw0NCcgZmlsbD0nI2ZmZmZmZicvPjxyZWN0IHg9JzI4JyB5PSc1MCcgd2lkdGg9JzQ0JyBoZWlnaHQ9JzEwJyByeD0nMicgZmlsbD0nI2ZmZmZmZicvPjxsaW5lIHgxPSc5MCcgeTE9JzQ0JyB4Mj0nOTAnIHkyPSc2Nicgc3Ryb2tlPScjZmZmZmZmJyBzdHJva2Utd2lkdGg9JzQnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPjxjaXJjbGUgY3g9JzkwJyBjeT0nNzAnIHI9JzQnIGZpbGw9JyNmZmZmZmYnLz48L3N2Zz4K",
+      "sizes": "192x192 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

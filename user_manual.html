@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الاستخدام: نظام إدارة الأكاديمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --bg: #f8f9fa;
+            --text: #333;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 { color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; }
+        h2 { color: var(--secondary); margin-top: 40px; }
+        h3 { color: var(--primary); }
+        .step-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .step-content { flex: 1; min-width: 300px; }
+        .step-thumbnail {
+            flex: 1;
+            min-width: 300px;
+            background: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        ul { padding-right: 20px; }
+        li { margin-bottom: 8px; }
+        
+        /* Wireframe Styles */
+        .wireframe { width: 100%; max-width: 350px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 15px; font-family: sans-serif; font-size: 12px; color: #64748b; }
+        .wf-header { font-weight: bold; font-size: 14px; margin-bottom: 10px; color: #334155; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
+        .wf-input { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 6px; margin-bottom: 8px; display: block; width: calc(100% - 14px); }
+        .wf-btn { background: #3498db; color: white; border: none; border-radius: 4px; padding: 6px 12px; cursor: pointer; text-align: center; display: inline-block; }
+        .wf-btn-green { background: #2ecc71; }
+        .wf-row { display: flex; justify-content: space-between; margin-bottom: 5px; padding: 5px; background: #f8fafc; border-radius: 4px; }
+        .wf-card-group { display: flex; gap: 10px; margin-bottom: 10px; }
+        .wf-card { flex: 1; padding: 10px; border-radius: 4px; background: #e8f8f5; text-align: center; }
+        .wf-card-orange { background: #fef5e7; }
+        .wf-text-red { color: #e74c3c; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>دليل المستخدم: نظام إدارة بيانات الأكاديمية</h1>
+    <p>يقدم هذا الدليل شرحاً تفصيلياً لخطوات العمل على البرنامج بدءاً من إدخال البيانات الأولية وحتى استخراج التقارير وعمل النسخ الاحتياطية.</p>
+
+    <!-- 1. Settings -->
+    <h2>1. الإعدادات والبيانات الأولية (البنية التحتية)</h2>
+    <div class="step-container">
+        <div class="step-content">
+            <p>قبل البدء، يجب تهيئة النظام من خلال صفحة <strong>الإعدادات (Settings)</strong>.</p>
+            <h3>أ. إضافة المراحل والمواد:</h3>
+            <ul>
+                <li>اكتب اسم المرحلة واضغط <strong>إضافة مرحلة</strong>.</li>
+                <li>اختر المرحلة المضافة، واكتب اسم المادة واضغط <strong>إضافة مادة</strong>.</li>
+            </ul>
+            <h3>ب. إضافة المجموعات (مع ربط المدرس):</h3>
+            <ul>
+                <li>اختر المادة، ثم اختر <strong>المدرس</strong> المسؤول.</li>
+                <li>حدد <strong>سعر المجموعة</strong> (المبلغ المطلوب من الطالب).</li>
+                <li>حدد <strong>نسبة المدرس (%)</strong> من دخل هذه المجموعة.</li>
+                <li>أدخل بقية التفاصيل (نظام الدفع، الأيام، الوقت) ثم اضغط <strong>إضافة مجموعة</strong>.</li>
+            </ul>
+        </div>
+        <div class="step-thumbnail">
+            <div class="wireframe">
+                <div class="wf-header">⚙️ إعداد المجموعة (Group Setup)</div>
+                <div class="wf-input">اختر المادة ▼</div>
+                <div class="wf-input">اختر المدرس ▼</div>
+                <div style="display:flex; gap:5px;">
+                    <div class="wf-input" style="flex:1">السعر...</div>
+                    <div class="wf-input" style="flex:1">النسبة %...</div>
+                </div>
+                <div class="wf-input">اسم المجموعة...</div>
+                <div class="wf-btn">إضافة مجموعة</div>
+            </div>
+            <p style="font-size:12px; color:#666; margin-top:10px;">واجهة إعداد المجموعات الجديدة</p>
+        </div>
+    </div>
+
+    <!-- 2. Teachers -->
+    <h2>2. إدارة المدرسين (Teachers)</h2>
+    <div class="step-container">
+        <div class="step-content">
+            <p>يمكنك تسجيل المدرسين لإسنادهم إلى المجموعات الدراسية لاحقاً.</p>
+            <ul>
+                <li>اذهب إلى صفحة <strong>المدرسين (Teachers)</strong>.</li>
+                <li>أدخل اسم المدرس واضغط <strong>حفظ</strong>.</li>
+                <li>تُستخدم هذه القائمة في صفحة الإعدادات لربط كل مجموعة بمدرسها وتحديد نسبته الربحية.</li>
+            </ul>
+        </div>
+        <div class="step-thumbnail">
+            <div class="wireframe">
+                <div class="wf-header">👨‍🏫 المدرسين (Teachers)</div>
+                <div class="wf-input">اسم المدرس الجديد...</div>
+                <div class="wf-btn wf-btn-green">حفظ المدرس</div>
+                <hr style="margin:10px 0; border:0; border-top:1px solid #eee;">
+                <div class="wf-row"><span>أ. محمد علي</span> <span>❌</span></div>
+                <div class="wf-row"><span>أ. سارة أحمد</span> <span>❌</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Students -->
+    <h2>3. تسجيل الطلاب (Students)</h2>
+    <div class="step-container">
+        <div class="step-content">
+            <p>بعد تجهيز المجموعات، يمكنك إضافة الطلاب.</p>
+            <ul>
+                <li>اذهب لصفحة <strong>الطلاب</strong> واضغط <strong>إضافة طالب</strong>.</li>
+                <li>أدخل الاسم ورقم الهاتف (النظام يكتشف الأشقاء تلقائياً).</li>
+                <li>اختر المرحلة، ثم ستظهر المجموعات المتاحة لها.</li>
+                <li>اختر المجموعة وتاريخ الالتحاق ثم اضغط <strong>حفظ</strong>.</li>
+            </ul>
+        </div>
+        <div class="step-thumbnail">
+            <div class="wireframe">
+                <div class="wf-header">👥 تسجيل طالب</div>
+                <div class="wf-input">اسم الطالب...</div>
+                <div class="wf-input">رقم الهاتف...</div>
+                <div class="wf-input">المرحلة: الابتدائية ▼</div>
+                <div style="background:#f1f5f9; padding:8px; border-radius:4px;">
+                    <strong>التسجيل في المجموعات</strong>
+                    <div class="wf-input" style="margin-top:5px;">مجموعة النوابغ (إنجليزي) ▼</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Attendance -->
+    <h2>4. الغياب والحضور (Attendance)</h2>
+    <div class="step-container">
+        <div class="step-content">
+            <p>تسجيل الحضور هو المحرك الأساسي لحسابات الطلاب والمدرسين المعتمدة على "الحصة".</p>
+            <ul>
+                <li>اذهب لصفحة <strong>الغياب والحضور</strong>.</li>
+                <li>اختر المجموعة والتاريخ.</li>
+                <li>حدد الطلاب الحاضرين واضغط <strong>حفظ الغياب</strong>.</li>
+            </ul>
+        </div>
+        <div class="step-thumbnail">
+            <div class="wireframe">
+                <div class="wf-header">📅 أخذ الغياب</div>
+                <div class="wf-row"><span>☑ أحمد محمد</span> <span>حاضر</span></div>
+                <div class="wf-row"><span>☐ محمود علي</span> <span>غائب</span></div>
+                <div class="wf-btn wf-btn-green" style="width:100%; box-sizing:border-box;">حفظ السجل</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Finance -->
+    <h2>5. العمليات المالية (Finance)</h2>
+    <div class="step-container">
+        <div class="step-content">
+            <h3>أ. حسابات الطلاب (Student Transaction):</h3>
+            <ul>
+                <li>تتبع مديونيات الطلاب بناءً على حضورهم الفعلي.</li>
+                <li>سجل دفعاتهم المالية لتحديث رصيد "المتأخرات".</li>
+            </ul>
+            <h3>ب. حسابات المدرسين (Teacher Transaction):</h3>
+            <ul>
+                <li>تتبع مستحقات كل مدرس بناءً على المجموعات التي يدرسها ونسبته المئوية.</li>
+                <li>سجل الدفعات التي تسلمها المدرس من الأكاديمية لمتابعة "الرصيد المتبقي" له.</li>
+            </ul>
+        </div>
+        <div class="step-thumbnail">
+            <div class="wireframe">
+                <div class="wf-header">💰 حسابات المدرسين</div>
+                <div class="wf-input">ابحث عن مدرس...</div>
+                <div class="wf-card-group">
+                    <div class="wf-card wf-card-orange">المستحق<br><strong>1200</strong></div>
+                    <div class="wf-card">المدفوع<br><strong>1000</strong></div>
+                    <div class="wf-card">المتبقي<br><span class="wf-text-red">200</span></div>
+                </div>
+                <div class="wf-btn" style="width:100%; box-sizing:border-box;">تسجيل صرف مبلغ</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Backup -->
+    <h2>6. النسخ الاحتياطي للأمان (Backup)</h2>
+    <div class="step-container">
+        <div class="step-content">
+            <p>يوفر النظام آلية آمنة لحفظ واسترجاع كافة البيانات (طلاب، مدرسين، حسابات، غياب).</p>
+            <ul>
+                <li><strong>تصدير البيانات (Export):</strong> لأخذ نسخة احتياطية على جهازك.</li>
+                <li><strong>استيراد البيانات (Import):</strong> لاستعادة بيانات سابقة في حال حدوث عطل أو تغيير الجهاز.</li>
+            </ul>
+        </div>
+        <div class="step-thumbnail">
+            <div class="wireframe">
+                <div class="wf-header">💾 إدارة البيانات</div>
+                <div class="wf-btn" style="width:100%; box-sizing:border-box; margin-bottom:5px;">⬇️ تصدير (Export)</div>
+                <div class="wf-btn wf-btn-green" style="width:100%; box-sizing:border-box;">⬆️ استيراد (Import)</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

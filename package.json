@@ -1,0 +1,19 @@
+{
+  "name": "academy-management",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Academy management (legacy v0, free and open source)",
+  "scripts": {
+    "build:legacy": "node scripts/build-legacy.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "globals": "^17.13.0",
+    "jsdom": "^29.1.1",
+    "vitest": "^3.0.0"
+  }
+}

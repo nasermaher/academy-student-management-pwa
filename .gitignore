@@ -1,0 +1,53 @@
+# --- Real data / privacy ---
+# These contain actual student names, phone numbers, and financial records.
+# Never commit real user data to a public repository.
+students.json
+students.json.xlsx
+groups.json
+groups.json.xlsx
+stages.json
+academy_backup_*.json
+academy_default_backup_*.json
+
+# --- Old version snapshots / working archives (not the shipped app) ---
+Academy System v0 gespark/
+Academy System v1/
+Academy System v2/
+Academy System v2.zip
+Academy System v3/
+Academy System v4/
+Academy System v4.zip
+Academy System v5/
+Academy System v5.zip
+Academy System mobile v4.zip
+student-management-system/
+student-management-system.zip
+
+# --- Personal / working notes, not part of the app ---
+about me.txt
+final prompt.txt
+prompt.docx
+prompt - Copy.docx
+review.txt
+Academy Student Management System.pdf
+Academy Student Management Systemتقرير دفعات.pdf
+report sample.pdf
+WhatsApp Audio *.mpeg
+
+# --- Editor / tool directories ---
+.claude/
+.agents/
+.vscode/
+.idea/
+
+# --- OS files ---
+Thumbs.db
+.DS_Store
+
+node_modules/
+dist/
+_site/
+
+# sync server data
+sync-data.json
+sync-data.json.tmp
